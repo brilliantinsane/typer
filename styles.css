@@ -3,9 +3,19 @@
 body {
     font-family: 'Raleway', sans-serif;
     height: 100vh;
-    background: #333 url('bg.jpg') no-repeat center center / cover;
+    background: #222 url('computer.jpg') no-repeat center center / cover;
     color: #ccc;
     overflow: hidden;
+}
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -1;
 }
 
 .container {
@@ -16,11 +26,13 @@ body {
     padding: 0 3rem;
 }
 
-.txt_type > .txt {
-    border-right: 0.2rem solid #777;
+.txt_type>.txt {
+    border-right: 0.2rem solid #ccc;
+    color: #fff;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-weight: 200;
     margin: 0.4rem;
 }
@@ -31,12 +43,12 @@ h1 {
 
 h2 {
     font-size: 1.4rem;
-    color: #aaa;
+    color: #ccc;
 }
 
 a {
-    color: #aaa;
-    
+    color: #ccc;
+
 }
 
 
@@ -50,7 +62,7 @@ a {
     .container {
         padding: 0 1rem;
     }
-    
+
     h1 {
         font-size: 3rem;
     }

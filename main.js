@@ -34,7 +34,7 @@
 //     if(this.isDeleting) {
 //         typeSpeed /= 2;
 //     }
-    
+
 //     // Check if word is completed
 //     if(!this.isDeleting && this.txt === fullTxt) {
 //         // Make pause at end
@@ -75,7 +75,7 @@ class TypeWriter {
         const fullTxt = this.words[current];
 
         // Check if deleting
-        if(this.isDeleting) {
+        if (this.isDeleting) {
             // Remove a char
             this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
@@ -89,17 +89,17 @@ class TypeWriter {
         // Initial Type Speed
         let typeSpeed = 300;
 
-        if(this.isDeleting) {
-            typeSpeed /= 2;
+        if (this.isDeleting) {
+            typeSpeed /= 3;
         }
-        
+
         // Check if word is completed
-        if(!this.isDeleting && this.txt === fullTxt) {
+        if (!this.isDeleting && this.txt === fullTxt) {
             // Make pause at end
             typeSpeed = this.wait;
             // Set isDeleting to true
             this.isDeleting = true;
-        } else if(this.isDeleting && this.txt === '') {
+        } else if (this.isDeleting && this.txt === '') {
             this.isDeleting = false;
             // Move to the next word
             this.wordIndex++;
